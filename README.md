@@ -72,22 +72,17 @@ cd backend && npm run dev
 cd frontend && npm run dev
 ```
 
-## 🐳 Docker (Tùy chọn)
-
-```bash
-docker-compose up -d
-```
-
 ## 🔐 Tài khoản mặc định (sau khi seed)
 
-| Vai trò | Email | Mật khẩu |
-|---------|-------|-----------|
-| Admin | admin@example.com | admin123 |
-| User | user@example.com | user123 |
+| Vai trò | Email             | Mật khẩu |
+| ------- | ----------------- | -------- |
+| Admin   | admin@example.com | admin123 |
+| User    | user@example.com  | user123  |
 
 ## 🛠 Tech Stack
 
 ### Frontend
+
 - **React 18** + **TypeScript** + **Vite**
 - **Ant Design 5** - UI Components
 - **React Router v6** - Routing
@@ -96,6 +91,7 @@ docker-compose up -d
 - **Day.js** - Date formatting
 
 ### Backend
+
 - **Node.js** + **Express** + **TypeScript**
 - **MySQL2** - Database driver
 - **JWT** - Authentication
@@ -105,28 +101,32 @@ docker-compose up -d
 - **express-validator** - Input validation
 
 ### Database
+
 - **MySQL 8.0**
 
 ## 📡 API Endpoints
 
 ### Auth
-| Method | URL | Mô tả |
-|--------|-----|-------|
-| POST | /api/auth/register | Đăng ký |
-| POST | /api/auth/login | Đăng nhập |
-| GET | /api/auth/profile | Thông tin cá nhân (cần token) |
+
+| Method | URL                | Mô tả                         |
+| ------ | ------------------ | ----------------------------- |
+| POST   | /api/auth/register | Đăng ký                       |
+| POST   | /api/auth/login    | Đăng nhập                     |
+| GET    | /api/auth/profile  | Thông tin cá nhân (cần token) |
 
 ### Users (cần token)
-| Method | URL | Mô tả | Quyền |
-|--------|-----|-------|-------|
-| GET | /api/users | Danh sách users | Admin |
-| GET | /api/users/:id | Chi tiết user | Auth |
-| PUT | /api/users/:id | Cập nhật user | Admin |
-| DELETE | /api/users/:id | Xóa user | Admin |
+
+| Method | URL            | Mô tả           | Quyền |
+| ------ | -------------- | --------------- | ----- |
+| GET    | /api/users     | Danh sách users | Admin |
+| GET    | /api/users/:id | Chi tiết user   | Auth  |
+| PUT    | /api/users/:id | Cập nhật user   | Admin |
+| DELETE | /api/users/:id | Xóa user        | Admin |
 
 ## 🔧 Mở rộng dự án
 
 Thêm module mới (ví dụ: Products):
+
 1. `backend/src/models/product.model.ts`
 2. `backend/src/controllers/product.controller.ts`
 3. `backend/src/routes/product.routes.ts`
